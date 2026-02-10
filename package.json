@@ -1,0 +1,11 @@
+{
+  "name": "carlos-rodriguez-resume",
+  "version": "1.0.0",
+  "description": "Static resume website for Carlos Rodriguez",
+  "scripts": {
+    "start": "npx serve -s . -l ${PORT:-3000}"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
