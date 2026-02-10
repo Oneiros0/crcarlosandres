@@ -129,6 +129,31 @@ a:hover {
 
 .header-content {
   display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ---- Profile Photo ---- */
+
+.profile-photo-wrap {
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--stone);
+  box-shadow: 0 2px 12px rgba(107, 83, 68, 0.12);
+  display: block;
+}
+
+.header-text {
+  flex: 1;
+  display: flex;
   justify-content: space-between;
   align-items: flex-end;
   gap: 2rem;
@@ -630,12 +655,24 @@ a:hover {
 
   .header-content {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .header-text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .header-meta {
-    text-align: left;
-    align-items: flex-start;
+    text-align: center;
+    align-items: center;
   }
 
   .competencies-grid {
