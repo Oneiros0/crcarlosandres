@@ -581,6 +581,12 @@ a:hover {
   margin-bottom: 0.75rem;
 }
 
+.volunteer-block + .volunteer-block {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
 .volunteer-block p:last-child {
   font-size: 0.9rem;
   color: var(--charcoal);
