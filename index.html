@@ -175,15 +175,16 @@
               <ul>
                 <li>Architected data ingestion pipelines to scrape, transform, and load tens of thousands of athlete records into the platform&rsquo;s user system using Puppeteer and Node.js</li>
                 <li>Revived a proprietary scoring algorithm (SPARQ) by collecting raw athletic performance data, standardizing it, and feeding it into a Dockerized neural network &mdash; achieving 98% accuracy with new scores falling within 2% of originals</li>
-                <li>Built the Stripe-powered subscription infrastructure from the ground up &mdash; billing, plan management, revenue reporting, and a feature-gating access control layer</li>
-                <li>Owned the end-to-end user onboarding experience; built analytics dashboards to track conversion rates and identify drop-off points</li>
+                <li>Built the Stripe-powered subscription infrastructure from the ground up &mdash; billing, plan management, revenue reporting, and a feature-gating access control layer determining what purchased products users can access</li>
+                <li>Owned the end-to-end user onboarding experience; built analytics dashboards to track conversion rates and identify drop-off points, optimizing for activation and retention</li>
                 <li>Generated monthly revenue and revenue-sharing reports via Stripe, providing financial data visibility to stakeholders</li>
-                <li>Developed front-office data visualization dashboards using D3.js to display SPARQ athletic performance data on curves</li>
+                <li>Developed front-office data visualization dashboards using D3.js to display SPARQ athletic performance data on curves, enabling coaches and scouts to analyze athlete metrics</li>
                 <li>Designed AWS Lambda cron jobs to roll up large datasets into optimized summary tables, reducing storage costs</li>
                 <li>Built and maintained the platform&rsquo;s API infrastructure on AWS S3, handling all backend traffic</li>
+                <li>Supported and maintained RockyRoad, an internal serverless video transcoding system &mdash; handled user-uploaded athlete highlight videos on the front end, enforcing format and resolution standards and loading to S3, where a chain of AWS Lambda functions then segmented videos, transcoded segments in parallel via FFmpeg, and reassembled them for platform delivery</li>
                 <li>Performed MySQL query optimization, foreign key optimization, and table restructuring to improve database performance</li>
               </ul>
-              <p class="timeline-stack">Python, Node.js, React.js, Next.js, D3.js, AWS (S3, Lambda, CDN), Docker, MySQL, TensorFlow, Keras, Puppeteer, Stripe API</p>
+              <p class="timeline-stack">Python, Node.js, React.js, Next.js, D3.js, AWS (S3, Lambda, CDN), Docker, MySQL, TensorFlow, Keras, Puppeteer, Stripe API, FFmpeg</p>
             </div>
           </article>
 
@@ -264,20 +265,19 @@
           <div class="section-line"></div>
         </div>
         <div class="project-card">
-          <h3>Arcana &mdash; Open-Source Python Package</h3>
-          <span class="project-badge">In Development</span>
+          <h3>Arcana &mdash; Open-Source Python Package &nbsp;<a href="https://github.com/Oneiros0" class="header-link" target="_blank" rel="noopener noreferrer">GitHub</a></h3>
           <ul>
-            <li>Building a Python package that queries the Coinbase API for real-time cryptocurrency transaction data and transforms it into quantitative trading bars (based on Marcos Lopez de Prado&rsquo;s methodologies)</li>
-            <li>Designing a productized data pipeline for ingesting, transforming, and serving financial time-series data for consumption by trading systems</li>
+            <li>Built a Python package that queries the Coinbase API for real-time cryptocurrency transaction data and transforms it into quantitative trading bars (based on Marcos Lopez de Prado&rsquo;s methodologies)</li>
+            <li>Designed a productized data pipeline for ingesting, transforming, and serving financial time-series data for consumption by trading systems</li>
           </ul>
           <p class="timeline-stack">Python, Coinbase API, Real-Time Data Ingestion, Data Transformation</p>
         </div>
         <div class="project-card" style="margin-top: 1.5rem;">
-          <h3>Scryer &mdash; Real-Time Data Visualization Dashboard</h3>
-          <span class="project-badge">Planned</span>
+          <h3>Sigil &mdash; Data Enrichment Pipeline</h3>
+          <span class="project-badge">In Development</span>
           <ul>
-            <li>Designing a real-time dashboard to visualize quantitative trading bars produced by the Arcana pipeline</li>
-            <li>Will feed processed signals into a neural network for automated buy/sell decision-making</li>
+            <li>Building a data enrichment layer on top of Arcana&rsquo;s output, implementing meta-labeling, sample weighting, and fractional differentiation techniques from Chapters 3&ndash;5 of <em>Advances in Financial Machine Learning</em></li>
+            <li>Enriching financial time-series data produced by Arcana with features designed for downstream ML consumption and automated trading signal generation</li>
           </ul>
         </div>
       </div>
